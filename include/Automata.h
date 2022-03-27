@@ -1,32 +1,36 @@
+// Copyright 2022 UNN-IASR
+#pragma once
+#include <iostream>
 #include <string>
 
-enum States
-{
-    OFF,
-    WAIT,
-    ACCEPT,
-    CHECK,
-    COOK
+using std::string;
+
+enum States {
+  OFF,
+  WAIT,
+  ACCEPT,
+  CHECK,
+  COOK
 };
 
-class Automata
-{
-private:
+class Automata {
+ private:
     int cash;
-    std::string* menu;
+    string* menu;
     int* prices;
     States state;
-    bool check(int _choice);
-    void cook();
+    int option;
 
-public:
+ public:
     Automata();
     void on();
     void off();
     void coin(int money);
-    std::string etMenu();
+    void getMenu();
     States getState();
     void choice(int _choice);
     int cancel();
+    bool check();
+    void cook();
     int finish();
 };
