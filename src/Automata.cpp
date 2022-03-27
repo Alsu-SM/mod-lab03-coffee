@@ -7,9 +7,9 @@ using std::endl;
 Automata::Automata() {
     cash = 0;
     menu = new std::string[3];
-    menu[0] = "Coffee";
-    menu[1] = "Tea";
-    menu[2] = "Cola";
+    menu[0] = "Item 1";
+    menu[1] = "Item 2";
+    menu[2] = "Item 3";
     prices = new int[3];
     prices[0] = 10;
     prices[1] = 20;
